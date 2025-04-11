@@ -18,6 +18,10 @@ app.use(cors({
   }));
   
 app.use(express.json());
+// Root route handler
+app.get("/", (req, res) => {
+    res.send("Hello, world! This is the root route.");
+});
 
 app.use('/api/users', userRoutes);
 // Below user routes
