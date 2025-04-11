@@ -15,6 +15,8 @@ app.use(cors({
     origin: '*',  // This will allow all domains
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+
   }));
   
 app.use(express.json());
