@@ -10,13 +10,11 @@ connectDB();
 
 const app = express();
 
-// Allow all origins to make requests
 app.use(cors({
-    origin: '*',  // This will allow all domains
+    origin: 'http://localhost:5174',  // Replace with your frontend domain
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-
+    credentials: true,  // Enable credentials
   }));
   
 app.use(express.json());
