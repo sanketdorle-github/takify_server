@@ -10,9 +10,13 @@ connectDB();
 
 const app = express();
 
+// Allow all origins to make requests
 app.use(cors({
-    origin: '*'
+    origin: '*',  // This will allow all domains
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   }));
+  
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
